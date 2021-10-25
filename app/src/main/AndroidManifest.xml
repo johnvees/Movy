@@ -38,7 +38,7 @@
             android:name=".DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".home.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".sign.signup.SignUpPhotoScreenActivity"

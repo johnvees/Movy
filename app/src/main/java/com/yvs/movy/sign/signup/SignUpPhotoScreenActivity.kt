@@ -6,7 +6,6 @@ import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
-import android.media.Image
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +25,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
-import com.yvs.movy.HomeActivity
+import com.yvs.movy.home.HomeActivity
 import com.yvs.movy.R
 import com.yvs.movy.utils.Preferences
 import java.util.*

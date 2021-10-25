@@ -9,7 +9,7 @@ import android.widget.Toast
 import com.google.firebase.database.*
 import com.yvs.movy.R
 
-import com.yvs.movy.HomeActivity
+import com.yvs.movy.home.HomeActivity
 import com.yvs.movy.sign.signup.SignUpActivity
 import com.yvs.movy.utils.Preferences
 

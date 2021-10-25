@@ -42,4 +42,6 @@
     <string name="saldo_ersedia">Saldo Tersedia</string>
     <string name="daftar_transaksi">Daftar Transaksi</string>
     <string name="history">History</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
