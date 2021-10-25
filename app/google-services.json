@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "164346546385",
+    "project_id": "movy-8c077",
+    "storage_bucket": "movy-8c077.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164346546385:android:1f6a070a643d4a3bd25df0",
+        "android_client_info": {
+          "package_name": "com.yvs.movy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164346546385-q9r4d0uicjjsvvjlqnif6pnqagfndbpm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdm-fKLaW-vVSp_-mvGhGLeQKlQvxIo-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164346546385-q9r4d0uicjjsvvjlqnif6pnqagfndbpm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
