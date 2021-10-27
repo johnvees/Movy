@@ -7,6 +7,7 @@ import android.widget.Button
 import com.yvs.movy.R
 import com.yvs.movy.sign.signin.SignInActivity
 import com.yvs.movy.utils.Preferences
+import kotlinx.android.synthetic.main.activity_onboarding_one.*
 
 class OnboardingOneActivity : AppCompatActivity() {
 
@@ -15,9 +16,6 @@ class OnboardingOneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding_one)
-
-        val btn_daftar = findViewById(R.id.btn_daftar) as Button
-        val btn_home = findViewById(R.id.btn_home) as Button
 
         preference = Preferences(this)
 

@@ -28,6 +28,7 @@ import com.karumi.dexter.listener.single.PermissionListener
 import com.yvs.movy.home.HomeActivity
 import com.yvs.movy.R
 import com.yvs.movy.utils.Preferences
+import kotlinx.android.synthetic.main.activity_sign_up_photo_screen.*
 import java.util.*
 
 class SignUpPhotoScreenActivity : AppCompatActivity(), PermissionListener {
@@ -43,12 +44,6 @@ class SignUpPhotoScreenActivity : AppCompatActivity(), PermissionListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_photo_screen)
-
-        val tv_hello = findViewById<TextView>(R.id.tv_hello)
-        val iv_profile = findViewById<ImageView>(R.id.iv_profile)
-        val iv_add = findViewById<ImageView>(R.id.iv_add)
-        val btn_home = findViewById<Button>(R.id.btn_home)
-        val btn_save = findViewById<Button>(R.id.btn_save)
 
         preferences = Preferences(this)
         storage = FirebaseStorage.getInstance()

@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.google.firebase.database.*
 import com.yvs.movy.R
 import com.yvs.movy.sign.signin.User
+import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -24,12 +25,6 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-
-        val btn_lanjutkan =  findViewById(R.id.btn_lanjutkan) as Button
-        val et_username = findViewById(R.id.et_username) as EditText
-        val et_password = findViewById(R.id.et_password) as EditText
-        val et_nama = findViewById(R.id.et_nama) as EditText
-        val et_email = findViewById(R.id.et_email) as EditText
 
         mFirebaseInstance = FirebaseDatabase.getInstance()
         mDatabase = FirebaseDatabase.getInstance().getReference()

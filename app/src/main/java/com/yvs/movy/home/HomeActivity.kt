@@ -6,15 +6,12 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.yvs.movy.R
 import com.yvs.movy.home.dashboard.DashboardFragment
+import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
-        val iv_menu1 = findViewById<ImageView>(R.id.iv_menu1)
-        val iv_menu2 = findViewById<ImageView>(R.id.iv_menu2)
-        val iv_menu3 = findViewById<ImageView>(R.id.iv_menu3)
 
         val fragmentHome = DashboardFragment()
         val fragmentTicket = TicketFragment()

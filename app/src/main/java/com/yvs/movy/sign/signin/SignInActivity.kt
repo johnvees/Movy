@@ -12,6 +12,7 @@ import com.yvs.movy.R
 import com.yvs.movy.home.HomeActivity
 import com.yvs.movy.sign.signup.SignUpActivity
 import com.yvs.movy.utils.Preferences
+import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class SignInActivity : AppCompatActivity() {
 
@@ -24,12 +25,6 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-
-        val btn_home = findViewById(R.id.btn_home) as Button
-        val btn_daftar = findViewById(R.id.btn_daftar) as Button
-        val et_username = findViewById(R.id.et_username) as EditText
-        val et_password = findViewById(R.id.et_password) as EditText
-
 
         mDatabase = FirebaseDatabase.getInstance().getReference("User")
         preference = Preferences(this)

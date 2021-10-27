@@ -16,6 +16,7 @@ import com.google.firebase.database.*
 import com.yvs.movy.R
 import com.yvs.movy.model.Film
 import com.yvs.movy.utils.Preferences
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 import java.text.NumberFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -37,12 +38,6 @@ class DashboardFragment : Fragment() {
 
     private var dataList = ArrayList<Film>()
 
-//    val tv_nama = view?.findViewById<TextView>(R.id.tv_nama)
-    val tv_saldo = view!!.findViewById<TextView>(R.id.tv_saldo)
-    val iv_profile = view!!.findViewById<ImageView>(R.id.iv_profile)
-    val rv_nowPlaying = view!!.findViewById<RecyclerView>(R.id.rv_nowPlaying)
-    val rv_comingSoon = view!!.findViewById<RecyclerView>(R.id.rv_comingSoon)
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -57,7 +52,7 @@ class DashboardFragment : Fragment() {
         preferences = Preferences(activity!!.applicationContext)
         mDatabase = FirebaseDatabase.getInstance().getReference("Film")
 
-        tv_nama?.text = preferences.getValues("nama")
+        tv_nama.text = preferences.getValues("nama")
         if (preferences.getValues("saldo").equals("")){
             curreny(preferences.getValues("saldo")!!.toDouble(), tv_saldo)
         }
