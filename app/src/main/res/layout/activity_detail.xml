@@ -14,6 +14,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/iv_poster"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:src="@drawable/ic_poster"
@@ -25,15 +26,36 @@
             android:padding="16dp"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Avengers: Invinity War"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="normal" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_kursi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Avengers: Invinity War"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawableStart="@drawable/ic_star"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    tools:text="4" />
+
+            </RelativeLayout>
 
             <TextView
+                android:id="@+id/tv_genre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Action, Sci-fi, Kids"
@@ -51,6 +73,7 @@
                 android:textStyle="normal" />
 
             <TextView
+                android:id="@+id/tv_desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="The Avengers must stop Thanos, a mad Titan, and his army from getting their hands on all the infinity stones. However, the mad Titan is prepared to go to any lengths to carry out his insane plan."
@@ -68,8 +91,9 @@
                 android:textStyle="normal" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_whoPlayed"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"/>
+                android:layout_height="100dp"/>
         </LinearLayout>
 
     </LinearLayout>

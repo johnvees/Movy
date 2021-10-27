@@ -1,5 +1,6 @@
 package com.yvs.movy.home.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.database.*
+import com.yvs.movy.DetailActivity
 import com.yvs.movy.R
 import com.yvs.movy.model.Film
 import com.yvs.movy.utils.Preferences
@@ -79,11 +81,14 @@ class DashboardFragment : Fragment() {
                 }
 
                 rv_nowPlaying.adapter = NowPlayingAdapter(dataList){
+                    var intent = Intent(context, DetailActivity::class.java).putExtra("data", it)
+                    startActivity(intent)
 
                 }
-//                rv_comingSoon.adapter = ComingSoonAdapter(dataList){
-//
-//                }
+                rv_comingSoon.adapter = ComingSoonAdapter(dataList){
+                    var intent = Intent(context, DetailActivity::class.java).putExtra("data", it)
+                    startActivity(intent)
+                }
 
             }
 
