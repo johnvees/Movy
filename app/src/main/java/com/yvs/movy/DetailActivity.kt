@@ -1,11 +1,13 @@
 package com.yvs.movy
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.google.firebase.database.*
+import com.yvs.movy.checkout.PilihBangkuActivity
 import com.yvs.movy.home.dashboard.PlaysAdapter
 import com.yvs.movy.model.Film
 import com.yvs.movy.model.Plays
@@ -38,6 +40,11 @@ class DetailActivity : AppCompatActivity() {
 
         rv_whoPlayed.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         getData()
+
+        btn_pilihBangku.setOnClickListener {
+            var intent = Intent(this@DetailActivity, PilihBangkuActivity::class.java).putExtra("data", data)
+            startActivity(intent)
+        }
     }
 
     private fun getData() {

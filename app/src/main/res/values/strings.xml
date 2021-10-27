@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Movy</string>
     <string name="lewati_perkenalan">Lewati Perkenalan</string>
+    <string name="home">Home</string>
     <string name="lanjutkan">Lanjutkan</string>
+    <string name="lihat_tiket">Lihat Tiket</string>
     <string name="now_playing">Now Playing</string>
+    <string name="happy_watching">Happy Watching!</string>
     <string name="now_playing_desc">Lebih mudah untuk mengetahui\nfilm yang sedang tampil</string>
     <string name="pre_sale">Pre Sale</string>
     <string name="pre_sale_desc">Tidak hampir ketinggalan\nupdate film terbaru</string>
