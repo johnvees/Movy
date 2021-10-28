@@ -4,13 +4,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBlue"
     tools:context=".home.tiket.TiketActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="440dp"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/shape_rectangle_white">
+
+            <ImageView
+                android:id="@+id/iv_posterImage"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                tools:src="@drawable/il_ticket_success"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/iv_posterImage"
+                tools:text="Movies Name"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlue"/>
+
+            <TextView
+                android:id="@+id/tv_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/iv_posterImage"
+                android:layout_below="@id/tv_title"
+                tools:text="Genre"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlueGrey"/>
+
+            <TextView
+                android:id="@+id/tv_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_posterImage"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toEndOf="@id/iv_posterImage"
+                android:gravity="center"
+                android:drawableStart="@drawable/ic_star"
+                android:drawablePadding="8dp"
+                android:textColor="@color/colorBlueGrey"
+                android:textSize="14sp"
+                tools:text="4" />
+
+            <TextView
+                android:id="@+id/tv_when"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_posterImage"
+                android:layout_marginTop="40dp"
+                android:text="When"
+                android:textColor="@color/colorBlue"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_dateAndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_when"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_dateAndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="Date and Time"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlueGrey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="12 Aug, 10 AM"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlue"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_cinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/rl_dateAndTime">
+
+                <TextView
+                    android:id="@+id/tv_cinema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_cinema"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="Cinema"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlueGrey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="TP 5 IMAX"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlue"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_cinema"
+                android:layout_marginTop="20dp"
+                android:text="Items"
+                android:textColor="@color/colorBlue"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_items"
+                android:layout_marginTop="8dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/row_item_checkout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_above="@id/iv_barcode2"
+                android:background="@drawable/shape_line"/>
+
+            <ImageView
+                android:id="@+id/iv_barcode2"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_barcode2"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_barcode" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Scan QR"
+                android:textColor="@color/colorBlue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Quick Print"
+                android:textColor="@color/colorBlueGrey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
