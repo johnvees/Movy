@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
         <activity
+            android:name=".home.tiket.TiketActivity"
+            android:exported="false" />
+        <activity
             android:name=".checkout.CheckOutSuccessActivity"
             android:exported="false" />
         <activity

@@ -6,6 +6,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.yvs.movy.R
 import com.yvs.movy.home.dashboard.DashboardFragment
+import com.yvs.movy.home.tiket.TicketFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
